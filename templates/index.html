@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi app</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <h3>LISTA DE PENDIENTES</h3>
+  <div>
+    <form class="form" action="/" method="get">
+      <p>Fecha: {{fechaHoy}}</p>
+      
+      <br>
+      <label for="titulo">Titulo: </label>
+      <input name="titulo" ></input>
+      <br>
+      <label for="descripcion">Descripcion: </label>
+      <textarea  name="descripcion" ></textarea>
+      <br>
+      <button type="submit" value="submit">Guardar</button>
+    </form>
+   </div>
+  <div>
+    {%for nota in notas%}
+      <p>{{nota.fecha}} | {{nota.titulo}} | {{nota.descripcion}}</p>
+    {%endfor%}
+  </div>
+</body>
+<footer>
+  <p>-<p>
+</footer>
+</html>
